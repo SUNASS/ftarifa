@@ -81,7 +81,7 @@ Even if you have these installed, it is highly recommended to check for updates:
 
 {title:Examples}
 
-See {browse "https://github.com/asjadnaqvi/stata-ftarifa":GitHub}.
+See {browse "https://github.com/AlejandroPerezPortocarrero/ftarifa":GitHub}.
 
 {hline}
 
@@ -91,29 +91,29 @@ See {browse "https://github.com/asjadnaqvi/stata-ftarifa":GitHub}.
 Version      : {bf:ftarifa} v1.21
 This release : 11 Jun 2024
 First release: 10 Apr 2023
-Repository   : {browse "https://github.com/asjadnaqvi/stata-ftarifa":GitHub}
+Repository   : {browse "https://github.com/AlejandroPerezPortocarrero/ftarifa":GitHub}
 Keywords     : Stata, graph, bump chart, rank plot
 License      : {browse "https://opensource.org/licenses/MIT":MIT}
 
-Author       : {browse "https://github.com/asjadnaqvi":Asjad Naqvi}
+Author       : {browse "https://github.com/AlejandroPerezPortocarrero":Asjad Naqvi}
 E-mail       : asjadnaqvi@gmail.com
 Twitter      : {browse "https://twitter.com/AsjadNaqvi":@AsjadNaqvi}
 
 
 {title:Feedback}
 
-Please submit bugs, errors, feature requests on {browse "https://github.com/asjadnaqvi/stata-ftarifa/issues":GitHub} by opening a new issue.
+Please submit bugs, errors, feature requests on {browse "https://github.com/AlejandroPerezPortocarrero/ftarifa/issues":GitHub} by opening a new issue.
 
 {title:Citation guidelines}
 
 Suggested citation guidlines for this package:
 
-Naqvi, A. (2024). Stata package "ftarifa" version 1.21. Release date 11 June 2024. https://github.com/asjadnaqvi/stata-ftarifa.
+Naqvi, A. (2024). Stata package "ftarifa" version 1.21. Release date 11 June 2024. https://github.com/AlejandroPerezPortocarrero/stata-ftarifa.
 
 @software{ftarifa,
    author = {Naqvi, Asjad},
    title = {Stata package ``ftarifa''},
-   url = {https://github.com/asjadnaqvi/stata-ftarifa},
+   url = {https://github.com/AlejandroPerezPortocarrero/ftarifa},
    version = {1.21},
    date = {2024-06-11}
 }
