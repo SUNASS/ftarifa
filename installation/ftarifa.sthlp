@@ -1,7 +1,7 @@
 {smcl}
 {* 11Jun2024}{...}
 {hi:help ftarifa}{...}
-{right:{browse "https://github.com/asjadnaqvi/stata-ftarifa":ftarifa v1.21 (GitHub)}}
+{right:{browse "https://github.com/AlejandroPerezPortocarrero/ftarifa":ftarifa v0.1 (GitHub)}}
 
 {hline}
 
