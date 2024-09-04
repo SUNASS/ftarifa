@@ -1,0 +1,19 @@
+v 1.21
+d {bf:FTARIFA}: A Stata package for bump lines charts or ribbon plots.
+d
+d KW: Stata
+d KW: graphs
+d KW: bump line
+d
+d Distribution-Date: 20240611
+d License: MIT
+d
+d Author: Asjad Naqvi
+d E-mail: asjadnaqvi@gmail.com
+d
+f bumpline.ado
+f bumpline.sthlp
+
+
+
+
