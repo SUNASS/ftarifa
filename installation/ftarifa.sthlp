@@ -21,6 +21,7 @@ The options are described as follows:
 {synoptline}
 
 {p2coldent : {opt tarifa1}}The command requires a numeric.{p_end}
+{p2coldent : ...                        ...}
 {p2coldent : {opt }}All other standard twoway options.{p_end}
 
 {synoptline}
