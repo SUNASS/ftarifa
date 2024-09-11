@@ -5,11 +5,13 @@
 
 {hline}
 
-{title:ftarifa}: A Stata package for calculating tariffs in the drinking water and sanitation sector.
+{title:ftarifa}: A Stata package for calculating tariffs in the drinking water and sanitation sector. 
+
 
 {marker syntax}{title:Syntax}
 {p 8 15 2}
-{cmd:ftarifa} {varname} {cmd:[}{it:options}{cmd:]}
+
+{cmd:ftarifa} {varname} {cmd:[}{it:, options}{cmd:]}
 
 {p 4 4 2}
 The options are described as follows:
@@ -18,13 +20,13 @@ The options are described as follows:
 {synopthdr}
 {synoptline}
 
-{p2coldent : {opt name(mpiname)}       name of the multidimensional poverty index (MPI).}
-{p2coldent : {opt d1(varlist[, subopt])} specification of dimension 1.}
-{p2coldent : ...                        ...}
-{p2coldent : {opt d10(varlist[, subopt])} specification of dimension 10.}
-{p2coldent : {opt description(text)}   short description of the MPI specified.}
-{p2coldent : {opt clear}               clear all specifications.}
-{p2coldent : {opt replace}             replace specification if it exists.}
+{p2coldent : {opt name(mpiname)}       name of the multidimensional poverty index (MPI).
+{p2coldent : {opt d1(varlist[, subopt])} specification of dimension 1.
+{p2coldent : ...                       ...
+{p2coldent : {opt d10(varlist[, subopt])} specification of dimension 10.
+{p2coldent : {opt description(text)}   short description of the MPI specified.
+{p2coldent : {opt clear}               clear all specifications.
+{p2coldent : {opt replace}             replace specification if it exists.{p_end}
 
 {synoptline}
 {p2colreset}{...}
