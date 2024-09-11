@@ -23,7 +23,6 @@ The options are described as follows:
 {p2coldent : {opt ftarifa y x, by(group)}}The command requires a numeric {it:y} variable and a numeric {it:x} variable. The x variable is usually a time variable.{p_end}
 {p2coldent : {opt *}}All other standard twoway options.{p_end}
 
-
 {synoptline}
 {p2colreset}{...}
 
