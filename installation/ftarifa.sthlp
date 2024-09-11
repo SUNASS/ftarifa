@@ -20,7 +20,8 @@ The options are described as follows:
 {synopthdr}
 {synoptline}
 
-{p2coldent : {opt tarifa1}}Tariff for category {it: 1}.{p_end}
+{p2coldent : {opt tarifa1}}Tariffs for category {it: 1}.{p_end}
+{p2coldent : {opt quiebre1}}Breaks for category {it: 1}.{p_end}
 {p2coldent : {opt }}All other standard twoway options.{p_end}
 
 {synoptline}
