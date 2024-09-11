@@ -1,9 +1,12 @@
-v 1.21
-d BUMPLINE: A Stata package for bump line charts
+v 0.1
+d FTARIFA: A Stata package for calculating tariffs in the drinking water and sanitation sector
 d  
-d Distribution-Date: 20240611
+d Distribution-Date: 11/09/2024
 d
-d Asjad Naqvi
-d asjadnaqvi@gmail.com
-d https://medium.com/the-stata-guide
-
+d Superintendencia Nacional de Servicios de Saneamiento, SUNASS (Peru)
+d https://www.gob.pe/sunass
+d Documento de Trabajo N° 2024-003
+d Serie de Documentos de Trabajo
+d Working Paper series
+d Dirección de Políticas y Normas
+d Setiembre 2024

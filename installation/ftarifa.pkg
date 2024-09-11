@@ -1,15 +1,16 @@
-v 1.21
-d {bf:FTARIFA}: A Stata package for bump lines charts or ribbon plots.
+v 0.1
+d {bf:FTARIFA}: A Stata package for calculating tariffs in the drinking water and sanitation sector.
 d
 d KW: Stata
-d KW: graphs
-d KW: bump line
+d KW: tariffs 
+d KW: drinking water
+d KW: sanitation
 d
-d Distribution-Date: 20240611
-d License: MIT
+d Distribution-Date: 11/09/2024
+d License: SUNASS 
 d
-d Author: Asjad Naqvi
-d E-mail: asjadnaqvi@gmail.com
+d Author (s): SUNASS, Alejandro Perez Portocarrero, Jhon Alex Apaza Tacuri
+d E-mail: aperezp@sunass.gob.pe, camiyakusur@sunass.gob.pe
 d
 f ftarifa.ado
 f ftarifa.sthlp
