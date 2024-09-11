@@ -33,23 +33,11 @@ The options are described as follows:
 
 {title:Description}
 
-{cmd:ftarifa} ftarifa streamlines the calculation of charges based on predefined tariffs and user categories. 
-This package is designed to handle large datasets and diverse consumption patterns, enabling users to generate the necessary results quickly and accurately. 
-By automating the calculation process, ftarifa reduces the need for extensive programming, allowing regulators to focus on decision-making and analysis.
-
-
-{title:Dependencies}
-
-The {browse "http://repec.sowi.unibe.ch/stata/palettes/index.html":palette} package (Jann 2018, 2022) is required:
-
-{stata ssc install palettes, replace}
-{stata ssc install colrspace, replace}
-
-Even if you have these installed, it is highly recommended to check for updates: {stata ado update, update}
+{cmd:ftarifa} streamlines the calculation of charges in the drinking water and sanitation sector based on predefined tariffs and user categories. 
+The package is designed to handle large datasets and varied consumption patterns, allowing users to generate accurate results quickly. 
+By automating the calculation process, ftarifa minimizes the need for extensive programming, enabling regulators to focus on decision-making and analysis.
 
 {title:Examples}
-
-
 
 See {browse "https://github.com/AlejandroPerezPortocarrero/ftarifa":GitHub}.
 
@@ -61,16 +49,15 @@ See {browse "https://github.com/AlejandroPerezPortocarrero/ftarifa":GitHub}.
 
 {title:Package details}
 
-Version      : {bf:ftarifa} v1.21
-This release : 11 Jun 2024
-First release: 10 Apr 2023
+Version      : {bf:ftarifa} v0.1
+This release : 11/09/2024
+First release: 11/09/2024
 Repository   : {browse "https://github.com/AlejandroPerezPortocarrero/ftarifa":GitHub}
-Keywords     : Stata, graph, bump chart, rank plot
-License      : {browse "https://opensource.org/licenses/MIT":MIT}
+Keywords     : Stata, tariffs, drinking water, sanitation
+License      : {browse "":}
 
-Author       : {browse "https://github.com/AlejandroPerezPortocarrero":Asjad Naqvi}
-E-mail       : asjadnaqvi@gmail.com
-Twitter      : {browse "https://twitter.com/AsjadNaqvi":@AsjadNaqvi}
+Author       : {browse "https://github.com/AlejandroPerezPortocarrero":SUNASS}
+URL      : {browse "https://www.gob.pe/sunass":https://www.gob.pe/sunass}
 
 
 {title:Feedback}
@@ -81,32 +68,18 @@ Please submit bugs, errors, feature requests on {browse "https://github.com/Alej
 
 Suggested citation guidlines for this package:
 
-Naqvi, A. (2024). Stata package "ftarifa" version 1.21. Release date 11 June 2024. https://github.com/AlejandroPerezPortocarrero/stata-ftarifa.
+SUNASS. (2024). Stata package "ftarifa" version 0.1. Release date 9 Sep 2024. https://github.com/AlejandroPerezPortocarrero/stata-ftarifa.
 
 @software{ftarifa,
-   author = {Naqvi, Asjad},
+   author = {SUNASS},
    title = {Stata package ``ftarifa''},
    url = {https://github.com/AlejandroPerezPortocarrero/ftarifa},
-   version = {1.21},
-   date = {2024-06-11}
+   version = {0.1},
+   date = {2024-09-11}
 }
 
 
 
 {title:References}
 
-{p 4 8 2}Jann, B. (2018). {browse "https://www.stata-journal.com/article.html?article=gr0075":Color palettes for Stata graphics}. The Stata Journal 18(4): 765-785.
-
-{p 4 8 2}Jann, B. (2022). {browse "https://ideas.repec.org/p/bss/wpaper/43.html":Color palettes for Stata graphics: An update}. University of Bern Social Sciences Working Papers No. 43. 
-
-
-{title:Other visualization packages}
-
-{psee}
-    {helpb arcplot}, {helpb alluvial}, {helpb bimap}, {helpb bumparea}, {helpb ftarifa}, {helpb circlebar}, {helpb circlepack}, {helpb clipgeo}, {helpb delaunay}, {helpb joyplot}, 
-	{helpb marimekko}, {helpb polarspike}, {helpb sankey}, {helpb schemepack}, {helpb spider}, {helpb streamplot}, {helpb sunburst}, {helpb treecluster}, {helpb treemap}, {helpb waffle}
-	
-or visit {browse "https://github.com/asjadnaqvi":GitHub} for detailed documentation and examples.		
-
-
-
+{p 4 8 2}SUNASS (2024). {browse "":ftarifa: Un paquete de Stata para el cálculo de tarifas en el sector agua potable y saneamiento}. Documento de Trabajo N° 2024-003.
