@@ -31,6 +31,13 @@ The options are described as follows:
 {synoptline}
 {p2colreset}{...}
 
+{title:Description}
+
+{cmd:mpitb set} specifies the deprivation indicators for a MPI and stores this 
+information with the currently loaded dataset. One may store several specifications
+with one data set.{p_end}
+
+
 
 {title:Dependencies}
 
