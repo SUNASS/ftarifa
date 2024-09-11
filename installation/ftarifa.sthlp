@@ -21,7 +21,6 @@ The options are described as follows:
 {synoptline}
 
 {p2coldent : {opt tarifa1}}Tariff for category {it: 1}.{p_end}
-{p2coldent : ...                        ...}
 {p2coldent : {opt }}All other standard twoway options.{p_end}
 
 {synoptline}
