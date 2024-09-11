@@ -64,6 +64,7 @@ while a value of 8 shows almost vertical jumps.{p_end}
 {synoptline}
 {p2colreset}{...}
 
+
 {title:Dependencies}
 
 The {browse "http://repec.sowi.unibe.ch/stata/palettes/index.html":palette} package (Jann 2018, 2022) is required:
@@ -133,3 +134,6 @@ Naqvi, A. (2024). Stata package "ftarifa" version 1.21. Release date 11 June 202
 	{helpb marimekko}, {helpb polarspike}, {helpb sankey}, {helpb schemepack}, {helpb spider}, {helpb streamplot}, {helpb sunburst}, {helpb treecluster}, {helpb treemap}, {helpb waffle}
 	
 or visit {browse "https://github.com/asjadnaqvi":GitHub} for detailed documentation and examples.		
+
+
+
