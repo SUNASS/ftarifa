@@ -5,13 +5,13 @@
 
 {hline}
 
-{title:ftarifa}: A Stata package for bump area or ribbon plots. 
+{title:ftarifa}: A Stata package for calculating tariffs in the drinking water and sanitation sector. 
 
 
 {marker syntax}{title:Syntax}
 {p 8 15 2}
 
-{cmd:ftarifa} {it:y x} {ifin}, {cmd:by}(varname) 
+{cmd:ftarifa} {varname} {it:y x} {ifin}, {cmd:by}(varname) 
 		{cmd:[} {cmd:top}({it:num}) {cmdab:sel:ect(any|last)} {cmd:smooth}({it:num}) {cmd:palette}({it:str}) {cmd:labcond}({it:str}) {cmd:offset}({it:num})
 		  {cmdab:lw:idth}({it:str}) {cmdab:labs:ize}({it:str}) {cmdab:xlabs:ize}({it:str}) {cmdab:ylabs:ize}({it:str}) {cmdab:xlaba:ngle}({it:str}) {cmd:wrap}({it:num})
 		  {cmdab:msym:bol}({it:str}) {cmdab:ms:ize}({it:str}) {cmdab:mc:olor}({it:str}) {cmdab:mlc:olor}({it:str}) {cmdab:mlwid:th}({it:str}) {cmdab:mlabs:ize}({it:str})  *
@@ -81,7 +81,12 @@ Even if you have these installed, it is highly recommended to check for updates:
 
 {title:Examples}
 
+
+
 See {browse "https://github.com/AlejandroPerezPortocarrero/ftarifa":GitHub}.
+
+
+
 
 {hline}
 
