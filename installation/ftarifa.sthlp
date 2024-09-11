@@ -33,10 +33,9 @@ The options are described as follows:
 
 {title:Description}
 
-{cmd:mpitb set} specifies the deprivation indicators for a MPI and stores this 
-information with the currently loaded dataset. One may store several specifications
-with one data set.{p_end}
-
+{cmd:ftarifa} ftarifa streamlines the calculation of charges based on predefined tariffs and user categories. 
+This package is designed to handle large datasets and diverse consumption patterns, enabling users to generate the necessary results quickly and accurately. 
+By automating the calculation process, ftarifa reduces the need for extensive programming, allowing regulators to focus on decision-making and analysis.
 
 
 {title:Dependencies}
