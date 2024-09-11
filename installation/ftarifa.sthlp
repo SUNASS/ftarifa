@@ -11,8 +11,7 @@
 {marker syntax}{title:Syntax}
 {p 8 15 2}
 
-{cmd:ftarifa} {varname} {cmd:[}{it:options}
-        {cmd:]}
+{cmd:ftarifa} {varname} {cmd:[}{it:options}{cmd:]}
 
 {p 4 4 2}
 The options are described as follows:
