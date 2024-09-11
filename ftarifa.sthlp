@@ -14,20 +14,6 @@
 {cmd:ftarifa} {varname} {cmd:[}{it:options}
         {cmd:]}
 
-
-
-
-
-
-
-
- {it:y x} {ifin}, {cmd:by}(varname) 
-		{cmd:[} {cmd:top}({it:num}) {cmdab:sel:ect(any|last)} {cmd:smooth}({it:num}) {cmd:palette}({it:str}) {cmd:labcond}({it:str}) {cmd:offset}({it:num})
-		  {cmdab:lw:idth}({it:str}) {cmdab:labs:ize}({it:str}) {cmdab:xlabs:ize}({it:str}) {cmdab:ylabs:ize}({it:str}) {cmdab:xlaba:ngle}({it:str}) {cmd:wrap}({it:num})
-		  {cmdab:msym:bol}({it:str}) {cmdab:ms:ize}({it:str}) {cmdab:mc:olor}({it:str}) {cmdab:mlc:olor}({it:str}) {cmdab:mlwid:th}({it:str}) {cmdab:mlabs:ize}({it:str})  *
-        {cmd:]}
-
-
 {p 4 4 2}
 The options are described as follows:
 
