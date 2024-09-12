@@ -25,7 +25,7 @@ The options are described as follows:
 {p2coldent : {opt ...}}...{p_end}
 {p2coldent : {opt tarifa10(numlist)}}specify the tariffs for category {it: 10}.{p_end}
 {p2coldent : {opt quiebre10(numlist)}}specify the breaks for category {it: 10}.{p_end}
-{p2coldent : {opt generate(stubname)}}create tariff variables for all categories.{p_end}
+{p2coldent : {opt generate(stubname)}}create tariff variable for all categories.{p_end}
 {p2coldent : {opt category(stubname)}}identify category.{p_end}
 
 {synoptline}
