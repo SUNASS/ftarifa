@@ -24,3 +24,55 @@ The syntax for the latest version is as follows:
 ```stata
 ftarifa volfac [, tarifa1(numlist) quiebre1(numlist) ... tarifa10(numlist) quiebre10(numlist) g(imagua) cat(categoria)]
 ```
+
+
+## Citation guidelines
+Software packages take countless hours of programming, testing, and bug fixing. If you use this package, then a citation would be highly appreciated. Suggested citations:
+
+*in BibTeX*
+
+```
+@software{bimap,
+   author = {Naqvi, Asjad},
+   title = {Stata package ``bimap''},
+   url = {https://github.com/asjadnaqvi/stata-bimap},
+   version = {2.0},
+   date = {2024-08-22}
+}
+```
+
+*or simple text*
+
+```
+Naqvi, A. (2024). Stata package "bimap" version 2.0. Release date 22 August 2024. https://github.com/asjadnaqvi/stata-bimap.
+```
+
+
+*or see [SSC citation](https://ideas.repec.org/c/boc/bocode/s459196.html) (updated once a new version is submitted)*
+
+
+
+
+## Examples
+
+The examples showcase both the syntax for the use with `geoplot` (first syntax) and `spmap` (second syntax). The map outputs have been aligned to the extent possible but very minor differences in outputs might remain. Additionally, as `geoplot` is still in active development, output might break with latest updates or syntax might change. Please report these as soon as possible.
+
+Since I am using Stata 18+, I have to specify `old` option to pass the syntax to use `spmap`. This might be uncessary if you have older Stata versions.
+
+Users can either download the files from [GIS](./GIS/) and dump them in a folder or directly get them from Stata:
+
+Set up the data:
+
+```stata
+cd <change path to the working directory>
+
+foreach x in county county_shp2 state state_shp2 usa_county2 {
+	copy "https://github.com/asjadnaqvi/stata-bimap/raw/main/GIS/`x'.dta" "`x'.dta", replace
+}
+```
+
+## Feedback
+
+Please open an [issue](https://github.com/asjadnaqvi/stata-bimap/issues) to report errors, feature enhancements, and/or other requests. 
+
+
