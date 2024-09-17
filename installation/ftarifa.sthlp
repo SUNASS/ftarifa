@@ -1,7 +1,7 @@
 {smcl}
 {* 11Jun2024}{...}
 {hi:help ftarifa}{...}
-{right:{browse "https://github.com/AlejandroPerezPortocarrero/ftarifa":ftarifa v0.1 (GitHub)}}
+{right:{browse "https://github.com/SUNASS/ftarifa":ftarifa v0.1 (GitHub)}}
 
 {hline}
 
@@ -39,7 +39,7 @@ By automating the calculation process, ftarifa minimizes the need for extensive 
 
 {title:Examples}
 
-See {browse "https://github.com/AlejandroPerezPortocarrero/ftarifa":GitHub}.
+See {browse "https://github.com/SUNASS/ftarifa":GitHub}.
 
 
 
@@ -52,28 +52,28 @@ See {browse "https://github.com/AlejandroPerezPortocarrero/ftarifa":GitHub}.
 Version      : {bf:ftarifa} v0.1
 This release : 11/09/2024
 First release: 11/09/2024
-Repository   : {browse "https://github.com/AlejandroPerezPortocarrero/ftarifa":GitHub}
+Repository   : {browse "https://github.com/SUNAS/ftarifa":GitHub}
 Keywords     : Stata, tariffs, drinking water, sanitation
 License      : {browse "":}
 
-Author       : {browse "https://github.com/AlejandroPerezPortocarrero":SUNASS}
+Author       : {browse "https://github.com/SUNASS":SUNASS}
 URL      : {browse "https://www.gob.pe/sunass":https://www.gob.pe/sunass}
 
 
 {title:Feedback}
 
-Please submit bugs, errors, feature requests on {browse "https://github.com/AlejandroPerezPortocarrero/ftarifa/issues":GitHub} by opening a new issue.
+Please submit bugs, errors, feature requests on {browse "https://github.com/SUNASS/ftarifa/issues":GitHub} by opening a new issue.
 
 {title:Citation guidelines}
 
 Suggested citation guidlines for this package:
 
-SUNASS. (2024). Stata package "ftarifa" version 0.1. Release date 9 Sep 2024. https://github.com/AlejandroPerezPortocarrero/stata-ftarifa.
+SUNASS. (2024). Stata package "ftarifa" version 0.1. Release date 9 Sep 2024. https://github.com/SUNASS/stata-ftarifa.
 
 @software{ftarifa,
    author = {SUNASS},
    title = {Stata package ``ftarifa''},
-   url = {https://github.com/AlejandroPerezPortocarrero/ftarifa},
+   url = {https://github.com/SUNASS/ftarifa},
    version = {0.1},
    date = {2024-09-11}
 }
