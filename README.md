@@ -1,4 +1,4 @@
-[Installation](#Installation) | [Syntax](#Syntax) | [Citation guidelines](#Citation-guidelines) | [Examples](#Examples) | [Feedback](#Feedback) | [Change log](#Change-log)
+[Installation](#Installation) | [Syntax](#Syntax) | [Citation guidelines](#Citation-guidelines) | [Examples](#Examples) | [Feedback](#Feedback)  
 
 ---
 
@@ -73,6 +73,6 @@ foreach x in county county_shp2 state state_shp2 usa_county2 {
 
 ## Feedback
 
-Please open an [issue](https://github.com/asjadnaqvi/stata-bimap/issues) to report errors, feature enhancements, and/or other requests. 
+Please open an [issue](https://github.com/SUNASS/ftarifa/issues) to report errors, feature enhancements, and/or other requests. 
 
 
