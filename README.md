@@ -11,7 +11,12 @@
 
 ## Installation
 
-**ftarifa** is installed via GitHub, so any Stata user can make use of this package. The \ref{lst:code_installation} code details the commands to run in Stata to obtain the latest version of **ftarifa**.
+**ftarifa** is installed via GitHub, so any Stata user can make use of this package. The code below details the commands to run in Stata to obtain the latest version of **ftarifa**.
+
+```
+net install ftarifa, from("https://raw.githubusercontent.com/AlejandroPerezPortocarrero/ftarifa/main/installation/") replace
+```
+
 
 
 
