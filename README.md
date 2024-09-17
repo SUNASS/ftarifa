@@ -17,6 +17,10 @@
 net install ftarifa, from("https://raw.githubusercontent.com/AlejandroPerezPortocarrero/ftarifa/main/installation/") replace
 ```
 
+## Syntax for Stata versions 17 or newer
 
+The syntax for the latest version is as follows:
 
-
+```stata
+ftarifa volfac [, tarifa1(numlist) quiebre1(numlist) ... tarifa10(numlist) quiebre10(numlist) g(imagua) cat(categoria)]
+```
