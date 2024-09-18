@@ -50,19 +50,15 @@ SUNAS (2024). Stata package "ftarifa" version 0.1. Release date 11 September 202
 
 ## Examples
 
-The examples showcase both the syntax for the use with `geoplot` (first syntax) and `spmap` (second syntax). The map outputs have been aligned to the extent possible but very minor differences in outputs might remain. Additionally, as `geoplot` is still in active development, output might break with latest updates or syntax might change. Please report these as soon as possible.
+To provide a general example of aplication of **ftarifa**, here we first create a ficticious database of consumption of drinking water. This dataset contains 10,000 obervations of consumption divided in six categories, "Social", "Subsidized domestic", "Non-subsidized domestic", "Comercial", "Industrial" and "State". Each of these categories has specific tariff which applie. These are presented in the following table: 
 
-Since I am using Stata 18+, I have to specify `old` option to pass the syntax to use `spmap`. This might be uncessary if you have older Stata versions.
 
-Users can either download the files from [GIS](./GIS/) and dump them in a folder or directly get them from Stata:
 
-Set up the data:
+
 
 ```stata
-//GENERANDO VALORES VOLFAC, CATEGORIA Y NOMCAT
-
 clear 
-set obs 100
+set obs 10000
 gen volfac = round(rgamma(1, 100), .01)
 sort volfac
 gen random_norm = normal(invnorm(runiform()))
