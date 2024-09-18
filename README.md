@@ -1,4 +1,4 @@
-[Installation](#Installation) | [Syntax](#Syntax) | [Citation guidelines](#Citation-guidelines) | [Examples](#Examples) | [Feedback](#Feedback)  
+![image](https://github.com/user-attachments/assets/010a3208-cc5f-4b3b-8c48-bf60872e2f6f)[Installation](#Installation) | [Syntax](#Syntax) | [Citation guidelines](#Citation-guidelines) | [Examples](#Examples) | [Feedback](#Feedback)  
 
 ---
 
@@ -32,25 +32,20 @@ Software packages take countless hours of programming, testing, and bug fixing. 
 *in BibTeX*
 
 ```
-@software{bimap,
-   author = {Naqvi, Asjad},
-   title = {Stata package ``bimap''},
-   url = {https://github.com/asjadnaqvi/stata-bimap},
-   version = {2.0},
-   date = {2024-08-22}
+@software{ftarifa,
+   author = {SUNASS},
+   title = {Stata package ``ftarifa''},
+   url = {https://github.com/SUNASS/ftarifa},
+   version = {0.1},
+   date = {2024-09-11}
 }
 ```
 
 *or simple text*
 
 ```
-Naqvi, A. (2024). Stata package "bimap" version 2.0. Release date 22 August 2024. https://github.com/asjadnaqvi/stata-bimap.
+SUNAS (2024). Stata package "ftarifa" version 0.1. Release date 11 September 2024. [https://github.com/asjadnaqvi/stata-bimap](https://github.com/SUNASS/ftarifa).
 ```
-
-
-*or see [SSC citation](https://ideas.repec.org/c/boc/bocode/s459196.html) (updated once a new version is submitted)*
-
-
 
 
 ## Examples
