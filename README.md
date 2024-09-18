@@ -44,7 +44,7 @@ Software packages take countless hours of programming, testing, and bug fixing. 
 *or simple text*
 
 ```
-SUNAS (2024). Stata package "ftarifa" version 0.1. Release date 11 September 2024. [https://github.com/asjadnaqvi/stata-bimap](https://github.com/SUNASS/ftarifa).
+SUNAS (2024). Stata package "ftarifa" version 0.1. Release date 11 September 2024. https://github.com/SUNASS/ftarifa.
 ```
 
 
