@@ -17,7 +17,7 @@
 net install ftarifa, from("https://raw.github.com/SUNASS/ftarifa/main/installation/") replace
 ```
 
-## Syntax for Stata versions 17 or newer
+## Syntax
 
 The syntax for the latest version is as follows:
 
