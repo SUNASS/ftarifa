@@ -14,7 +14,7 @@
 **ftarifa** is installed via GitHub, so any Stata user can make use of this package. The code below details the commands to run in Stata to obtain the latest version of **ftarifa**.
 
 ```
-net install ftarifa, from("https://raw.githubusercontent.com/SUNASS/ftarifa/main/installation/") replace
+net install ftarifa, from("https://raw.github.com/SUNASS/ftarifa/main/installation/") replace
 ```
 
 ## Syntax for Stata versions 17 or newer
