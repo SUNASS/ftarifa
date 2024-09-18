@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/010a3208-cc5f-4b3b-8c48-bf60872e2f6f)[Installation](#Installation) | [Syntax](#Syntax) | [Citation guidelines](#Citation-guidelines) | [Examples](#Examples) | [Feedback](#Feedback)  
+[Installation](#Installation) | [Syntax](#Syntax) | [Citation guidelines](#Citation-guidelines) | [Examples](#Examples) | [Feedback](#Feedback)  
 
 ---
 
