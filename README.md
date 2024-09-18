@@ -59,11 +59,41 @@ Users can either download the files from [GIS](./GIS/) and dump them in a folder
 Set up the data:
 
 ```stata
-cd <change path to the working directory>
+//GENERANDO VALORES VOLFAC, CATEGORIA Y NOMCAT
 
-foreach x in county county_shp2 state state_shp2 usa_county2 {
-	copy "https://github.com/asjadnaqvi/stata-bimap/raw/main/GIS/`x'.dta" "`x'.dta", replace
-}
+clear 
+set obs 100
+gen volfac = round(rgamma(1, 100), .01)
+sort volfac
+gen random_norm = normal(invnorm(runiform()))
+egen temp = xtile(random_norm), nq(6)
+gen codcat = 100 + temp
+drop random_norm temp
+
+gen nomcat = ""
+replace nomcat = "SOCIAL" if codcat == 101
+replace nomcat = "DOMÉSTICO BENEFICIARIO" if codcat == 102
+replace nomcat = "DOMÉSTICO NO BENEFICIARIO" if codcat == 103
+replace nomcat = "COMERCIAL Y OTROS" if codcat == 104
+replace nomcat = "INDUSTRIAL" if codcat == 105
+replace nomcat = "ESTATAL" if codcat == 106 
+
+tostring codcat, replace 
+
+gen categoria = .
+replace categoria = 1 if nomcat == "SOCIAL"
+replace categoria = 2 if nomcat == "DOMÉSTICO BENEFICIARIO"
+replace categoria = 3 if nomcat == "DOMÉSTICO NO BENEFICIARIO"
+replace categoria = 4 if nomcat == "COMERCIAL Y OTROS"
+replace categoria = 5 if nomcat == "INDUSTRIAL"
+replace categoria = 6 if nomcat == "ESTATAL"
+
+//Teniendo las variables 'volfac' y 'categoria' definidas
+
+//APLICAMOS LA FORMULA PARA CALCULAR TARIFAS PARA SEDAPAR
+ftarifa volfac, tarifa1(1.7) quiebre1() tarifa2(1.7 1.9 2.9 7.3) quiebre2(10 20 50) tarifa3(2 2.9 7.3) quiebre3(20 50) tarifa4(1000) quiebre4(7.3 7.9) tarifa5(7.9) quiebre5() tarifa6(7.9) quiebre6()generate(imagua) categoria(categoria)
+
+save tarifa_sedapal, replace
 ```
 
 ## Feedback
