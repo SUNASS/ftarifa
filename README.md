@@ -22,7 +22,7 @@ net install ftarifa, from("https://raw.github.com/SUNASS/ftarifa/main/installati
 The syntax for the latest version is as follows:
 
 ```stata
-ftarifa volfac [, tarifa1(numlist) quiebre1(numlist) ... tarifa10(numlist) quiebre10(numlist) generate(imagua) categoria(categoria)]
+ftarifa varname1 [, tarifa1(numlist) quiebre1(numlist) ... tarifa10(numlist) quiebre10(numlist) generate(varname2) categoria(varname3)]
 ```
 
 
