@@ -1,4 +1,4 @@
-*! ftarifa v0.1 (4 Sep 2024)
+*! ftarifa v0.1 (6 Nov 2024)
 *! 
 
 *Eliminar programa existente
@@ -9,16 +9,16 @@ program define ftarifa
 
 	// syntax permite calcular tarifas basadas en una variable de entrada y diferentes niveles de tarifas y quiebres, organizadas en 10 pares
     syntax varname(min=1 max=1), ///
-	[TARifa1(numlist min=1 >=1 <=100 asc) QUIebre1(numlist min=0 >=0 <=1000000 asc)] ///
-	[TARifa2(numlist min=1 >=1 <=100 asc) QUIebre2(numlist min=0 >=0 <=1000000 asc)] ///
-	[TARifa3(numlist min=1 >=1 <=100 asc) QUIebre3(numlist min=0 >=0 <=1000000 asc)] ///
-	[TARifa4(numlist min=1 >=1 <=100 asc) QUIebre4(numlist min=0 >=0 <=1000000 asc)] ///
-	[TARifa5(numlist min=1 >=1 <=100 asc) QUIebre5(numlist min=0 >=0 <=1000000 asc)] ///
-	[TARifa6(numlist min=1 >=1 <=100 asc) QUIebre6(numlist min=0 >=0 <=1000000 asc)] ///
-	[TARifa7(numlist min=1 >=1 <=100 asc) QUIebre7(numlist min=0 >=0 <=1000000 asc)] ///
-	[TARifa8(numlist min=1 >=1 <=100 asc) QUIebre8(numlist min=0 >=0 <=1000000 asc)] ///
-	[TARifa9(numlist min=1 >=1 <=100 asc) QUIebre9(numlist min=0 >=0 <=1000000 asc)] ///
-	[TARifa10(numlist min=1 >=1 <=100 asc) QUIebre10(numlist min=0 >=0 <=1000000 asc)] ///
+	[TARifa1(numlist min=0 >=0 <=1000000 asc) QUIebre1(numlist min=0 >=0 <=1000000 asc)] ///
+	[TARifa2(numlist min=0 >=0 <=1000000 asc) QUIebre2(numlist min=0 >=0 <=1000000 asc)] ///
+	[TARifa3(numlist min=0 >=0 <=1000000 asc) QUIebre3(numlist min=0 >=0 <=1000000 asc)] ///
+	[TARifa4(numlist min=0 >=0 <=1000000 asc) QUIebre4(numlist min=0 >=0 <=1000000 asc)] ///
+	[TARifa5(numlist min=0 >=0 <=1000000 asc) QUIebre5(numlist min=0 >=0 <=1000000 asc)] ///
+	[TARifa6(numlist min=0 >=0 <=1000000 asc) QUIebre6(numlist min=0 >=0 <=1000000 asc)] ///
+	[TARifa7(numlist min=0 >=0 <=1000000 asc) QUIebre7(numlist min=0 >=0 <=1000000 asc)] ///
+	[TARifa8(numlist min=0 >=0 <=1000000 asc) QUIebre8(numlist min=0 >=0 <=1000000 asc)] ///
+	[TARifa9(numlist min=0 >=0 <=1000000 asc) QUIebre9(numlist min=0 >=0 <=1000000 asc)] ///
+	[TARifa10(numlist min=0 >=0 <=1000000 asc) QUIebre10(numlist min=0 >=0 <=1000000 asc)] ///
 	CATegoria(string) Generate(name)
 
 	//Almacena las variables en una lista
@@ -43,6 +43,10 @@ program define ftarifa
     if "`quiebre1'" != "" {		
 		local num_terms_quiebre1 : word count `quiebre1'
     }	
+	//Indica que el bloque de código que sigue se ejecutara si la condición del if antererior no se cumple
+	else {
+		local num_terms_quiebre1 = 0
+	}
 		
 	*CATEGORIA 2
 	//Comprueba si los macros tienen contenido, si es asi, cuenta el numero de valores en cada una y almacena esos numeros en ls macros num_terms_tar/qui
@@ -52,6 +56,10 @@ program define ftarifa
     if "`quiebre2'" != "" {	
 		local num_terms_quiebre2 : word count `quiebre2'
     }
+	else {
+		local num_terms_quiebre2 = 0
+	}
+	
 	
 	*CATEGORIA 3
 	//Comprueba si los macros tienen contenido, si es asi, cuenta el numero de valores en cada una y almacena esos numeros en ls macros num_terms_tar/qui
@@ -61,6 +69,10 @@ program define ftarifa
     if "`quiebre3'" != "" {
         local num_terms_quiebre3 : word count `quiebre3'
     }
+	else {
+		local num_terms_quiebre3 = 0
+	}
+	
 
 	*CATEGORIA 4
 	//Comprueba si los macros tienen contenido, si es asi, cuenta el numero de valores en cada una y almacena esos numeros en ls macros num_terms_tar/qui
@@ -70,6 +82,10 @@ program define ftarifa
     if "`quiebre4'" != "" {
         local num_terms_quiebre4 : word count `quiebre4'
     }
+	else {
+		local num_terms_quiebre4 = 0
+	}
+	
 
 	*CATEGORIA 5
 	//Comprueba si los macros tienen contenido, si es asi, cuenta el numero de valores en cada una y almacena esos numeros en ls macros num_terms_tar/qui
@@ -78,7 +94,11 @@ program define ftarifa
     }
     if "`quiebre5'" != "" {
         local num_terms_quiebre5 : word count `quiebre5'
-    }	
+    }
+	else {
+		local num_terms_quiebre5 = 0
+	}
+	
 
 	*CATEGORIA 6
 	//Comprueba si los macros tienen contenido, si es asi, cuenta el numero de valores en cada una y almacena esos numeros en ls macros num_terms_tar/qui
@@ -88,15 +108,23 @@ program define ftarifa
     if "`quiebre6'" != "" {
         local num_terms_quiebre6 : word count `quiebre6'
     }
+	else {
+		local num_terms_quiebre6 = 0
+	}
+	
 
 	*CATEGORIA 7
 	//Comprueba si los macros tienen contenido, si es asi, cuenta el numero de valores en cada una y almacena esos numeros en ls macros num_terms_tar/qui
     if "`tarifa7'" != "" {
         local num_terms_tarifa7 : word count `tarifa7'
     }
-    if "`quiebre6'" != "" {
+    if "`quiebre7'" != "" {
         local num_terms_quiebre7 : word count `quiebre7'
     }
+	else {
+		local num_terms_quiebre7 = 0
+	}
+	
 
 	*CATEGORIA 8
 	//Comprueba si los macros tienen contenido, si es asi, cuenta el numero de valores en cada una y almacena esos numeros en ls macros num_terms_tar/qui
@@ -106,6 +134,10 @@ program define ftarifa
     if "`quiebre8'" != "" {
         local num_terms_quiebre8 : word count `quiebre8'
     }
+	else {
+		local num_terms_quiebre8 = 0
+	}
+	
 
 	*CATEGORIA 9
 	//Comprueba si los macros tienen contenido, si es asi, cuenta el numero de valores en cada una y almacena esos numeros en ls macros num_terms_tar/qui
@@ -115,6 +147,10 @@ program define ftarifa
     if "`quiebre9'" != "" {
         local num_terms_quiebre9 : word count `quiebre9'
     }
+	else {
+		local num_terms_quiebre9 = 0
+	}
+	
 
 	*CATEGORIA 10
 	//Comprueba si los macros tienen contenido, si es asi, cuenta el numero de valores en cada una y almacena esos numeros en ls macros num_terms_tar/qui
@@ -124,6 +160,10 @@ program define ftarifa
     if "`quiebre10'" != "" {
         local num_terms_quiebre10 : word count `quiebre10'
     }
+	else {
+		local num_terms_quiebre10 = 0
+	}
+	
 		
 	//Guardar el estado actual de los datos
     preserve
@@ -179,10 +219,30 @@ program define ftarifa
 			quietly replace `tempstate1' = `tempstate1' + tarifa1_`num_terms_tarifa1' * (`varname' - quiebre1_`num_terms_quiebre1') if (`varname' > quiebre1_`num_terms_quiebre1' & `categoria' == 1)
 		}
 		else {
-			di "Error: El número de tarifas (n+1) tiene que ser número de quiebres (n) más una unidad para la categoría 1."
+			//Mensaje de error, cuando las cantidades no se cumplen 
+			display as error "*************************************************************************************"
+			display as error "ERROR: El número de tarifas (n+1) debe ser igual al número de quiebres (n) más uno para la categoría 1."
+			display as error "Número de tarifas: `num_terms_tarifa1'"
+			display as error "Número de quiebres: `num_terms_quiebre1'"
+			display as error "*************************************************************************************"
 		}
 	}
+	//Verifica si en la macro tarifa no esta vacio y en el numero de quiebres es igual a cero (no se especificaron)
+    else if "`tarifa1'" != "" & `num_terms_quiebre1' == 0 {
 		
+        // Caso de una tarifa pero sin quiebre
+        local num_tarifas : word count `tarifa1'
+		if `num_tarifas' == 1{
+		//Cálculo de tarifas para la categria, cuando no se han especificado quiebres
+			scalar tarifa1_1 = `tarifa1'
+			quietly replace `tempstate1' = tarifa1_1 * `varname' if (`varname' > 0 & `categoria' == 1)
+		}
+	   else {
+			display as error "*************************************************************************************"
+			display as error "Error: Debe contener una sola tarifa para la categoría 1 cuando no hay quiebres"
+			display as error "*************************************************************************************"
+		}
+    }	
 
     // Calcular tarifas para categoría 2 (SOCIAL_02) si hay tarifas y quiebres proporcionados
 	if ("`tarifa2'" != "" & "`quiebre2'" != "") {
@@ -212,9 +272,26 @@ program define ftarifa
 			quietly replace `tempstate2' = `tempstate2' + tarifa2_`num_terms_tarifa2' * (`varname' - quiebre2_`num_terms_quiebre2') if (`varname' > quiebre2_`num_terms_quiebre2' & `categoria' == 2)
 		}
 		else {
-			di "Error: El número de tarifas (n+1) tiene que ser número de quiebres (n) más una unidad para la categoría 2."
+			display as error "*************************************************************************************"
+			display as error "ERROR: El número de tarifas (n+1) debe ser igual al número de quiebres (n) más uno para la categoría 2."
+			display as error "Número de tarifas: `num_terms_tarifa2'"
+			display as error "Número de quiebres: `num_terms_quiebre2'"
+			display as error "*************************************************************************************"
 		}
 	}
+    else if "`tarifa2'" != "" & `num_terms_quiebre2' == 0 {
+        local num_tarifas : word count `tarifa2'
+        if `num_tarifas' == 1 {
+            scalar tarifa2_1 = `tarifa2'		
+            quietly replace `tempstate2' = tarifa2_1 * `varname' if (`varname' > 0 & `categoria' == 2)
+        }
+        else {
+			display as error "*************************************************************************************"
+			display as error "Error: Debe contener una sola tarifa para la categoría 2 cuando no hay quiebres"
+			display as error "*************************************************************************************"
+		}
+    }	
+
 
     // Calcular tarifas para categoría 3 (DOMESTICO_01), si hay tarifas y quiebres proporcionados
     if ("`tarifa3'" != "" & "`quiebre3'" != "") {
@@ -244,9 +321,25 @@ program define ftarifa
             quietly replace `tempstate3' = `tempstate3' + tarifa3_`num_terms_tarifa3' * (`varname' - quiebre3_`num_terms_quiebre3') if (`varname' > quiebre3_`num_terms_quiebre3' & `categoria' == 3)
         }
         else {
-            di "Error: El número de tarifas (n+1) tiene que ser número de quiebres (n) más una unidad para la categoría 3."
+			display as error "*************************************************************************************"
+			display as error "ERROR: El número de tarifas (n+1) debe ser igual al número de quiebres (n) más uno para la categoría 3."
+			display as error "Número de tarifas: `num_terms_tarifa3'"
+			display as error "Número de quiebres: `num_terms_quiebre3'"
+			display as error "*************************************************************************************"
         }
     }
+    else if "`tarifa3'" != "" & `num_terms_quiebre3' == 0 {
+        local num_tarifas : word count `tarifa3'
+        if `num_tarifas' == 1 {
+            scalar tarifa3_1 = `tarifa3'		
+            quietly replace `tempstate3' = tarifa3_1 * `varname' if (`varname' > 0 & `categoria' == 3)
+        }
+        else {
+			display as error "*************************************************************************************"
+			display as error "Error: Debe contener una sola tarifa para la categoría 3 cuando no hay quiebres"
+			display as error "*************************************************************************************"
+		}
+    }	
 
     // Calcular tarifas para categoría 4 (DOMESTICO_02), si hay tarifas y quiebres proporcionados
     if ("`tarifa4'" != "" & "`quiebre4'" != "") {
@@ -276,9 +369,25 @@ program define ftarifa
             quietly replace `tempstate4' = `tempstate4' + tarifa4_`num_terms_tarifa4' * (`varname' - quiebre4_`num_terms_quiebre4') if (`varname' > quiebre4_`num_terms_quiebre4' & `categoria' == 4)
         }
         else {
-            di "Error: El número de tarifas (n+1) tiene que ser número de quiebres (n) más una unidad para la categoría 4."
+			display as error "*************************************************************************************"
+			display as error "ERROR: El número de tarifas (n+1) debe ser igual al número de quiebres (n) más uno para la categoría 4."
+			display as error "Número de tarifas: `num_terms_tarifa4'"
+			display as error "Número de quiebres: `num_terms_quiebre4'"
+			display as error "*************************************************************************************"
         }
     }
+    else if "`tarifa4'" != "" & `num_terms_quiebre4' == 0 {
+        local num_tarifas : word count `tarifa4'
+        if `num_tarifas' == 1 {
+            scalar tarifa4_1 = `tarifa4'		
+            quietly replace `tempstate4' = tarifa4_1 * `varname' if (`varname' > 0 & `categoria' == 4)
+        }
+        else {
+			display as error "*************************************************************************************"
+			display as error "Error: Debe contener una sola tarifa para la categoría 4 cuando no hay quiebres"
+			display as error "*************************************************************************************"
+		}
+    }	
 
     // Calcular tarifas para categoría 5 (COMERCIAL_01), si hay tarifas y quiebres proporcionados
     if ("`tarifa5'" != "" & "`quiebre5'" != "") {
@@ -308,9 +417,25 @@ program define ftarifa
             quietly replace `tempstate5' = `tempstate5' + tarifa5_`num_terms_tarifa5' * (`varname' - quiebre5_`num_terms_quiebre5') if (`varname' > quiebre5_`num_terms_quiebre5' & `categoria' == 5)
         }
         else {
-            di "Error: El número de tarifas (n+1) tiene que ser número de quiebres (n) más una unidad para la categoría 5."
+			display as error "*************************************************************************************"
+			display as error "ERROR: El número de tarifas (n+1) debe ser igual al número de quiebres (n) más uno para la categoría 5."
+			display as error "Número de tarifas: `num_terms_tarifa5'"
+			display as error "Número de quiebres: `num_terms_quiebre5'"
+			display as error "*************************************************************************************"
         }
     }
+    else if "`tarifa5'" != "" & `num_terms_quiebre5' == 0 {
+        local num_tarifas : word count `tarifa5'
+        if `num_tarifas' == 1 {
+            scalar tarifa5_1 = `tarifa5'		
+            quietly replace `tempstate5' = tarifa5_1 * `varname' if (`varname' > 0 & `categoria' == 5)
+        }
+        else {
+			display as error "*************************************************************************************"
+			display as error "Error: Debe contener una sola tarifa para la categoría 5 cuando no hay quiebres"
+			display as error "*************************************************************************************"
+		}
+    }	
 	
     // Calcular tarifas para categoría 6 (COMERCIAL_02), si hay tarifas y quiebres proporcionados
     if ("`tarifa6'" != "" & "`quiebre6'" != "") {
@@ -340,9 +465,25 @@ program define ftarifa
             quietly replace `tempstate6' = `tempstate6' + tarifa6_`num_terms_tarifa6' * (`varname' - quiebre6_`num_terms_quiebre6') if (`varname' > quiebre6_`num_terms_quiebre6' & `categoria' == 6)
         }
         else {
-            di "Error: El número de tarifas (n+1) tiene que ser número de quiebres (n) más una unidad para la categoría 6."
+			display as error "*************************************************************************************"
+			display as error "ERROR: El número de tarifas (n+1) debe ser igual al número de quiebres (n) más uno para la categoría 6."
+			display as error "Número de tarifas: `num_terms_tarifa6'"
+			display as error "Número de quiebres: `num_terms_quiebre6'"
+			display as error "*************************************************************************************"
         }
     }
+    else if "`tarifa6'" != "" & `num_terms_quiebre6' == 0 {
+        local num_tarifas : word count `tarifa6'
+        if `num_tarifas' == 1 {
+            scalar tarifa6_1 = `tarifa6'		
+            quietly replace `tempstate6' = tarifa6_1 * `varname' if (`varname' > 0 & `categoria' == 6)
+        }
+        else {
+			display as error "*************************************************************************************"
+			display as error "Error: Debe contener una sola tarifa para la categoría 6 cuando no hay quiebres"
+			display as error "*************************************************************************************"
+		}
+    }	
 		
     // Calcular tarifas para categoría 7 (INDUSTRIAL_01), si hay tarifas y quiebres proporcionados
     if ("`tarifa7'" != "" & "`quiebre7'" != "") {
@@ -372,8 +513,24 @@ program define ftarifa
             quietly replace `tempstate7' = `tempstate7' + tarifa7_`num_terms_tarifa7' * (`varname' - quiebre7_`num_terms_quiebre7') if (`varname' > quiebre7_`num_terms_quiebre7' & `categoria' == 7)
         }
         else {
-            di "Error: El número de tarifas (n+1) tiene que ser número de quiebres (n) más una unidad para la categoría 7."
+			display as error "*************************************************************************************"
+			display as error "ERROR: El número de tarifas (n+1) debe ser igual al número de quiebres (n) más uno para la categoría 7."
+			display as error "Número de tarifas: `num_terms_tarifa7'"
+			display as error "Número de quiebres: `num_terms_quiebre7'"
+			display as error "*************************************************************************************"
         }
+    }
+    else if "`tarifa7'" != "" & `num_terms_quiebre7' == 0 {
+        local num_tarifas : word count `tarifa7'
+        if `num_tarifas' == 1 {
+            scalar tarifa7_1 = `tarifa7'		
+            quietly replace `tempstate7' = tarifa7_1 * `varname' if (`varname' > 0 & `categoria' == 7)
+        }
+        else {
+			display as error "*************************************************************************************"
+			display as error "Error: Debe contener una sola tarifa para la categoría 7 cuando no hay quiebres"
+			display as error "*************************************************************************************"
+		}
     }
 	
     // Calcular tarifas para categoría 8 (INDUSTRIAL_02), si hay tarifas y quiebres proporcionados
@@ -404,8 +561,24 @@ program define ftarifa
             quietly replace `tempstate8' = `tempstate8' + tarifa8_`num_terms_tarifa8' * (`varname' - quiebre8_`num_terms_quiebre8') if (`varname' > quiebre8_`num_terms_quiebre8' & `categoria' == 8)
         }
         else {
-            di "Error: El número de tarifas (n+1) tiene que ser número de quiebres (n) más una unidad para la categoría 8."
+			display as error "*************************************************************************************"
+			display as error "ERROR: El número de tarifas (n+1) debe ser igual al número de quiebres (n) más uno para la categoría 8."
+			display as error "Número de tarifas: `num_terms_tarifa8'"
+			display as error "Número de quiebres: `num_terms_quiebre8'"
+"*************************************************************************************"
         }
+    }
+    else if "`tarifa8'" != "" & `num_terms_quiebre8' == 0 {
+        local num_tarifas : word count `tarifa8'
+        if `num_tarifas' == 1 {
+            scalar tarifa8_1 = `tarifa8'		
+            quietly replace `tempstate8' = tarifa8_1 * `varname' if (`varname' > 0 & `categoria' == 8)
+        }
+        else {
+			display as error "*************************************************************************************"
+			display as error "Error: Debe contener una sola tarifa para la categoría 8 cuando no hay quiebres"
+			display as error "*************************************************************************************"
+		}
     }
 	
     // Calcular tarifas para categoría 9 (ESTATAL_01), si hay tarifas y quiebres proporcionados
@@ -436,8 +609,24 @@ program define ftarifa
             quietly replace `tempstate9' = `tempstate9' + tarifa9_`num_terms_tarifa9' * (`varname' - quiebre9_`num_terms_quiebre9') if (`varname' > quiebre9_`num_terms_quiebre9' & `categoria' == 9)
         }
         else {
-            di "Error: El número de tarifas (n+1) tiene que ser número de quiebres (n) más una unidad para la categoría 9."
+			display as error "*************************************************************************************"
+			display as error "ERROR: El número de tarifas (n+1) debe ser igual al número de quiebres (n) más uno para la categoría 9."
+			display as error "Número de tarifas: `num_terms_tarifa9'"
+			display as error "Número de quiebres: `num_terms_quiebre9'"
+"*************************************************************************************"
         }
+    }
+    else if "`tarifa9'" != "" & `num_terms_quiebre9' == 0 {
+        local num_tarifas : word count `tarifa9'
+        if `num_tarifas' == 1 {
+            scalar tarifa9_1 = `tarifa9'		
+            quietly replace `tempstate9' = tarifa9_1 * `varname' if (`varname' > 0 & `categoria' == 9)
+        }
+        else {
+			display as error "*************************************************************************************"
+			display as error "Error: Debe contener una sola tarifa para la categoría 9 cuando no hay quiebres"
+			display as error "*************************************************************************************"
+		}
     }
 	
     // Calcular tarifas para categoría 10 (ESTATAL_02), si hay tarifas y quiebres proporcionados
@@ -468,8 +657,24 @@ program define ftarifa
             quietly replace `tempstate10' = `tempstate10' + tarifa10_`num_terms_tarifa10' * (`varname' - quiebre10_`num_terms_quiebre10') if (`varname' > quiebre10_`num_terms_quiebre10' & `categoria' == 10)
         }
         else {
-            di "Error: El número de tarifas (n+1) tiene que ser número de quiebres (n) más una unidad para la categoría 10."
+			display as error "*************************************************************************************"
+			display as error "ERROR: El número de tarifas (n+1) debe ser igual al número de quiebres (n) más uno para la categoría 10."
+			display as error "Número de tarifas: `num_terms_tarifa10'"
+			display as error "Número de quiebres: `num_terms_quiebre10'"
+"*************************************************************************************"
         }
+    }
+    else if "`tarifa10'" != "" & `num_terms_quiebre10' == 0 {
+        local num_tarifas : word count `tarifa10'
+        if `num_tarifas' == 1 {
+            scalar tarifa10_1 = `tarifa10'		
+            quietly replace `tempstate10' = tarifa10_1 * `varname' if (`varname' > 0 & `categoria' == 10)
+        }
+        else {
+			display as error "*************************************************************************************"
+			display as error "Error: Debe contener una sola tarifa para la categoría 10 cuando no hay quiebres"
+			display as error "*************************************************************************************"
+		}
     }
 	
     // Combinando resultados
@@ -485,14 +690,17 @@ program define ftarifa
 	quietly replace `generate' = `tempstate9' if `categoria' == 9
 	quietly replace `generate' = `tempstate10' if `categoria' == 10
 	
+	// Asegurarse de que los valores resultantes sean missing si son exactamente cero
+    quietly replace `generate' = . if `generate' == 0
+	
     tempfile input1
     save `input1', replace
     restore
 
     clear
     use `input1', clear
-end	
-	
+end
+
 	
 
 ************************
